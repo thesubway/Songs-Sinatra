@@ -8,7 +8,7 @@ class Song
   property :lyrics, Text
   property :length, Integer
   property :released_on, Date
-  
+
   def released_on=date
     super Date.strptime(date, '%m/%d/%Y')
   end
@@ -20,7 +20,16 @@ configure do
   set :password, 'sinatra'
 end
 
+configure :development do
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+end
+
+configure :production do
+  DataMapper.setup(:default, ENV['DATABASE_URL'])
+end
+
 DataMapper.finalize
+DataMapper.auto_migrate!
 
 get '/songs' do
   @songs = Song.all
@@ -42,7 +51,7 @@ get '/songs/:id/edit' do
   slim :edit_song
 end
 
-post '/songs' do  
+post '/songs' do
   song = Song.create(params[:song])
   redirect to("/songs/#{song.id}")
 end
