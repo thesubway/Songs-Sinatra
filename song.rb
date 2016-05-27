@@ -33,22 +33,22 @@ DataMapper.auto_migrate!
 
 get '/songs' do
   @songs = Song.all
-  slim :songs
+  erb :songs
 end
 
 get '/songs/new' do
   @song = Song.new
-  slim :new_song
+  erb :new_song
 end
 
 get '/songs/:id' do
   @song = Song.get(params[:id])
-  slim :show_song
+  erb :show_song
 end
 
 get '/songs/:id/edit' do
   @song = Song.get(params[:id])
-  slim :edit_song
+  erb :edit_song
 end
 
 post '/songs' do
