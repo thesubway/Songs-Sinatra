@@ -1,10 +1,13 @@
-<!doctype html>
-<html>
-<head></head>
-<body>
-<h1>Songs by Sinatra</h1> <ul>
-<li><a href="/">Home</a></li>
-<li><a href="/about">About</a></li> <li><a href="/contact">Contact</a></li> </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title><%= @title || "Songs By Sinatra" %>
+</title><meta charset="utf-8" />
+<link href="/styles.css" rel="stylesheet" />
+</head><body>
+<header>
+<h1>Songs By Sinatra</h1>
+<%= slim :nav %>
+</header><section>
 <%= yield %>
-</body>
-</html>
+</section></body></html>
