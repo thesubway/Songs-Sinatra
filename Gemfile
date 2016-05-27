@@ -12,6 +12,12 @@ gem "dm-migrations"
 
 gem "thin"
 
-gem "dm-postgres-adapter", :group => :production
+group :development do
+  gem 'dm-sqlite-adapter'
+  gem 'sqlite3-ruby'
+end
 
-gem "dm-sqlite-adapter", :group => :development
+group :production do
+  gem 'dm-postgres-adapter'
+  gem 'pg'
+end
