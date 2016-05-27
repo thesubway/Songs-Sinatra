@@ -1,0 +1,101 @@
+2016-05-27T20:35:50.022626+00:00 heroku[web.1]: State changed from starting to crashed
+2016-05-27T20:35:50.012213+00:00 heroku[web.1]: Process exited with status 1
+2016-05-27T20:35:50.345448+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=studentsongsdan.herokuapp.com request_id=e823ab70-7c00-49b8-96a2-ad9c6f3469d7 fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:35:50.900819+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=studentsongsdan.herokuapp.com request_id=00125f59-dd71-481f-a238-1a6fea2015fa fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:37:23.891785+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=studentsongsdan.herokuapp.com request_id=95b17ff8-e889-415d-bdc6-9cd7e70dcab9 fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:37:24.495127+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=studentsongsdan.herokuapp.com request_id=1ddc0f02-f018-4a74-9dde-accbcde58f51 fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:37:31.078041+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/songs" host=studentsongsdan.herokuapp.com request_id=ebcc8300-f0c3-4ee1-ac56-ddddc0f260aa fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:37:31.624176+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=studentsongsdan.herokuapp.com request_id=e52220b5-b3d3-4f45-a585-0613bad27551 fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:39:28.848265+00:00 heroku[api]: Release v6 created by danielhoang1@me.com
+2016-05-27T20:39:29.103734+00:00 heroku[slug-compiler]: Slug compilation started
+2016-05-27T20:39:29.103739+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-05-27T20:39:28.848236+00:00 heroku[api]: Deploy 480dc2f by danielhoang1@me.com
+2016-05-27T20:39:29.024045+00:00 heroku[web.1]: State changed from crashed to starting
+2016-05-27T20:39:30.780432+00:00 heroku[web.1]: Starting process with command `bundle exec thin start -R config.ru -e production -p 36793`
+2016-05-27T20:39:34.794815+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.7/lib/sinatra/base.rb:1981:in `block (2 levels) in delegate'
+2016-05-27T20:39:34.794771+00:00 app[web.1]: /app/vendor/bundle/ruby/2.2.0/gems/dm-core-1.2.1/lib/dm-core/adapters.rb:12:in `new': +options+ should be Hash or Addressable::URI or String, but was NilClass (ArgumentError)
+2016-05-27T20:39:34.794804+00:00 app[web.1]: 	from /app/song.rb:28:in `block in <top (required)>'
+2016-05-27T20:39:34.794796+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/dm-core-1.2.1/lib/dm-core.rb:230:in `setup'
+2016-05-27T20:39:34.794816+00:00 app[web.1]: 	from /app/song.rb:27:in `<top (required)>'
+2016-05-27T20:39:34.794817+00:00 app[web.1]: 	from /app/main.rb:4:in `require'
+2016-05-27T20:39:34.794817+00:00 app[web.1]: 	from /app/main.rb:4:in `<top (required)>'
+2016-05-27T20:39:34.794818+00:00 app[web.1]: 	from config.ru:1:in `block in <main>'
+2016-05-27T20:39:34.794818+00:00 app[web.1]: 	from config.ru:1:in `require'
+2016-05-27T20:39:34.794819+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+2016-05-27T20:39:34.794805+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.7/lib/sinatra/base.rb:1411:in `configure'
+2016-05-27T20:39:34.794820+00:00 app[web.1]: 	from config.ru:1:in `<main>'
+2016-05-27T20:39:34.794820+00:00 app[web.1]: 	from config.ru:1:in `new'
+2016-05-27T20:39:34.794819+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+2016-05-27T20:39:34.794821+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+2016-05-27T20:39:34.794822+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+2016-05-27T20:39:34.794828+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+2016-05-27T20:39:34.794828+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+2016-05-27T20:39:34.794829+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+2016-05-27T20:39:34.794830+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/thin:23:in `<main>'
+2016-05-27T20:39:34.794821+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+2016-05-27T20:39:34.794830+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/thin:23:in `load'
+2016-05-27T20:39:34.794829+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+2016-05-27T20:39:35.775104+00:00 heroku[web.1]: State changed from starting to crashed
+2016-05-27T20:39:35.763152+00:00 heroku[web.1]: Process exited with status 1
+2016-05-27T20:39:36.873026+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=studentsongsdan.herokuapp.com request_id=78eac682-2257-4168-8517-2858368feff4 fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:39:37.493847+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=studentsongsdan.herokuapp.com request_id=be7d3bcf-0d83-4400-9bf0-e457f2b7e48d fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:46:44.279658+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-05-27T20:46:44.279653+00:00 heroku[slug-compiler]: Slug compilation started
+2016-05-27T20:46:44.100199+00:00 heroku[api]: Deploy 34c5082 by danielhoang1@me.com
+2016-05-27T20:46:44.100199+00:00 heroku[api]: Release v7 created by danielhoang1@me.com
+2016-05-27T20:46:44.579019+00:00 heroku[web.1]: State changed from crashed to starting
+2016-05-27T20:46:46.217300+00:00 heroku[web.1]: Starting process with command `bundle exec thin start -R config.ru -e production -p 9336`
+2016-05-27T20:46:49.465981+00:00 app[web.1]: /app/vendor/bundle/ruby/2.2.0/gems/dm-core-1.2.1/lib/dm-core/adapters.rb:12:in `new': +options+ should be Hash or Addressable::URI or String, but was NilClass (ArgumentError)
+2016-05-27T20:46:49.466014+00:00 app[web.1]: 	from /app/main.rb:4:in `require'
+2016-05-27T20:46:49.466002+00:00 app[web.1]: 	from /app/song.rb:28:in `block in <top (required)>'
+2016-05-27T20:46:49.465998+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/dm-core-1.2.1/lib/dm-core.rb:230:in `setup'
+2016-05-27T20:46:49.466015+00:00 app[web.1]: 	from config.ru:1:in `require'
+2016-05-27T20:46:49.466016+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+2016-05-27T20:46:49.466013+00:00 app[web.1]: 	from /app/song.rb:27:in `<top (required)>'
+2016-05-27T20:46:49.466017+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+2016-05-27T20:46:49.466017+00:00 app[web.1]: 	from config.ru:1:in `new'
+2016-05-27T20:46:49.466012+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.7/lib/sinatra/base.rb:1981:in `block (2 levels) in delegate'
+2016-05-27T20:46:49.466018+00:00 app[web.1]: 	from config.ru:1:in `<main>'
+2016-05-27T20:46:49.466018+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+2016-05-27T20:46:49.466014+00:00 app[web.1]: 	from /app/main.rb:4:in `<top (required)>'
+2016-05-27T20:46:49.466019+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+2016-05-27T20:46:49.466006+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.7/lib/sinatra/base.rb:1411:in `configure'
+2016-05-27T20:46:49.466016+00:00 app[web.1]: 	from config.ru:1:in `block in <main>'
+2016-05-27T20:46:49.466026+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+2016-05-27T20:46:49.466028+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+2016-05-27T20:46:49.466026+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+2016-05-27T20:46:49.466027+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+2016-05-27T20:46:49.466020+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+2016-05-27T20:46:49.466029+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/thin:23:in `<main>'
+2016-05-27T20:46:49.466028+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/thin:23:in `load'
+2016-05-27T20:46:50.811811+00:00 heroku[web.1]: Process exited with status 1
+2016-05-27T20:46:50.825421+00:00 heroku[web.1]: State changed from starting to crashed
+2016-05-27T20:46:50.826587+00:00 heroku[web.1]: State changed from crashed to starting
+2016-05-27T20:46:52.644285+00:00 heroku[web.1]: Starting process with command `bundle exec thin start -R config.ru -e production -p 41813`
+2016-05-27T20:46:55.635988+00:00 app[web.1]: /app/vendor/bundle/ruby/2.2.0/gems/dm-core-1.2.1/lib/dm-core/adapters.rb:12:in `new': +options+ should be Hash or Addressable::URI or String, but was NilClass (ArgumentError)
+2016-05-27T20:46:55.636008+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/dm-core-1.2.1/lib/dm-core.rb:230:in `setup'
+2016-05-27T20:46:55.636019+00:00 app[web.1]: 	from /app/song.rb:28:in `block in <top (required)>'
+2016-05-27T20:46:55.636020+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.7/lib/sinatra/base.rb:1411:in `configure'
+2016-05-27T20:46:55.636033+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.7/lib/sinatra/base.rb:1981:in `block (2 levels) in delegate'
+2016-05-27T20:46:55.636046+00:00 app[web.1]: 	from /app/main.rb:4:in `require'
+2016-05-27T20:46:55.636041+00:00 app[web.1]: 	from /app/song.rb:27:in `<top (required)>'
+2016-05-27T20:46:55.636047+00:00 app[web.1]: 	from /app/main.rb:4:in `<top (required)>'
+2016-05-27T20:46:55.636055+00:00 app[web.1]: 	from config.ru:1:in `require'
+2016-05-27T20:46:55.636056+00:00 app[web.1]: 	from config.ru:1:in `block in <main>'
+2016-05-27T20:46:55.636057+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+2016-05-27T20:46:55.636057+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+2016-05-27T20:46:55.636058+00:00 app[web.1]: 	from config.ru:1:in `new'
+2016-05-27T20:46:55.636058+00:00 app[web.1]: 	from config.ru:1:in `<main>'
+2016-05-27T20:46:55.636059+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `eval'
+2016-05-27T20:46:55.636060+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/rack/adapter/loader.rb:33:in `load'
+2016-05-27T20:46:55.636060+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+2016-05-27T20:46:55.636073+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/controllers/controller.rb:72:in `start'
+2016-05-27T20:46:55.636074+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/runner.rb:200:in `run_command'
+2016-05-27T20:46:55.636075+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/lib/thin/runner.rb:156:in `run!'
+2016-05-27T20:46:55.636075+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/thin-1.6.4/bin/thin:6:in `<top (required)>'
+2016-05-27T20:46:55.636076+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/thin:23:in `load'
+2016-05-27T20:46:55.636076+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/thin:23:in `<main>'
+2016-05-27T20:46:56.738265+00:00 heroku[web.1]: Process exited with status 1
+2016-05-27T20:46:56.748140+00:00 heroku[web.1]: State changed from starting to crashed
+2016-05-27T20:46:57.559178+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=studentsongsdan.herokuapp.com request_id=77c710bd-37df-46ef-b96d-9a03b9b86577 fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
+2016-05-27T20:46:58.164499+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=studentsongsdan.herokuapp.com request_id=aaa2ed6e-2dba-4caf-8d48-6f0cafbeca4d fwd="129.210.115.114" dyno= connect= service= status=503 bytes=
