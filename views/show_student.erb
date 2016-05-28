@@ -1,0 +1,10 @@
+<h1><%= ::Temple::Utils.escape_html((@student.title)) %>
+</h1><p>Release Date: <%= ::Temple::Utils.escape_html((@student.released_on.strftime("%e %B %Y") if @student.released_on)) %></p>
+<p>Length: <%= ::Temple::Utils.escape_html((@student.length/60)) %> minutes <%= ::Temple::Utils.escape_html((@student.length%60)) %> seconds</p>
+<pre><%= ::Temple::Utils.escape_html((@student.lyrics)) %>
+</pre><p><a href="/students">back to students index</a></p>
+<p><a href="/students/<%= ::Temple::Utils.escape_html((@student.id)) %>/edit">edit this student</a></p>
+<form action="/students/<%= ::Temple::Utils.escape_html((@student.id)) %>" method="POST">
+<input name="_method" type="hidden" value="DELETE" />
+<input type="submit" value="delete this student" />
+</form>

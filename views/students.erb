@@ -1,0 +1,9 @@
+<h1>Students</h1>
+<a href="/students/new">Create a new student</a>
+<% if @students.any?
+ %><ul id="students">
+<% @students.each do |student|
+ %><li><a href="/students/<%= ::Temple::Utils.escape_html((student.id)) %>"><%= ::Temple::Utils.escape_html((student.title)) %></a></li>
+<% end %></ul><% else
+ %><p>No students have been created yet!</p>
+<% end %>

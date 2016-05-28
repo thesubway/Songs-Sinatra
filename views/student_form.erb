@@ -1,0 +1,9 @@
+<label for="title">Title:</label>
+<input id="title" name="student[title]" type="text" value="<%= ::Temple::Utils.escape_html((@student.title)) %>" />
+<label for="length">Length:</label>
+<input id="length" name="student[length]" type="number" value="<%= ::Temple::Utils.escape_html((@student.length)) %>" />
+<label for="released_on">Date(mm/dd/yyyy):</label>
+<input id="released_on" name="student[released_on]" type="text" value="<%= ::Temple::Utils.escape_html((@student.released_on.strftime("%m/%d/%Y") if @student.released_on)) %>" />
+<label for="lyrics">Lyrics:</label>
+<textarea id="lyrics" name="student[lyrics]"><%= @student.lyrics %>
+</textarea><input type="submit" value="Save Student" />

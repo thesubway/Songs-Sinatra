@@ -2,7 +2,7 @@ require 'dm-core'
 require 'dm-migrations'
 require './main.rb'
 
-class Song
+class Student
   include DataMapper::Resource
   property :id, Serial
   property :title, String
@@ -32,38 +32,38 @@ end
 DataMapper.finalize
 DataMapper.auto_migrate!
 
-get '/songs' do
-  @songs = Song.all
-  erb :songs
+get '/students' do
+  @students = Student.all
+  erb :students
 end
 
-get '/songs/new' do
-  @song = Song.new
-  erb :new_song
+get '/students/new' do
+  @student = Student.new
+  erb :new_student
 end
 
-get '/songs/:id' do
-  @song = Song.get(params[:id])
-  erb :show_song
+get '/students/:id' do
+  @student = Student.get(params[:id])
+  erb :show_student
 end
 
-get '/songs/:id/edit' do
-  @song = Song.get(params[:id])
-  erb :edit_song
+get '/students/:id/edit' do
+  @student = Student.get(params[:id])
+  erb :edit_student
 end
 
-post '/songs' do
-  song = Song.create(params[:song])
-  redirect to("/songs/#{song.id}")
+post '/students' do
+  student = Student.create(params[:student])
+  redirect to("/students/#{student.id}")
 end
 
-put '/songs/:id' do
-  song = Song.get(params[:id])
-  song.update(params[:song])
-  redirect to("/songs/#{song.id}")
+put '/students/:id' do
+  student = Student.get(params[:id])
+  student.update(params[:student])
+  redirect to("/students/#{student.id}")
 end
 
-delete '/songs/:id' do
-  Song.get(params[:id]).destroy
-  redirect to('/songs')
+delete '/students/:id' do
+  Student.get(params[:id]).destroy
+  redirect to('/students')
 end

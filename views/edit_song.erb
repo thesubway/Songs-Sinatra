@@ -1,5 +1,0 @@
-<h1>Edit Song</h1>
-<form action="/songs/<%= ::Temple::Utils.escape_html((@song.id)) %>" method="POST">
-<input name="_method" type="hidden" value="PUT" />
-<%= slim :song_form %>
-</form>

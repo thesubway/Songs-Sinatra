@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'slim'
 require 'sass'
-require './song'
+require './student'
 
 configure do
   enable :sessions
