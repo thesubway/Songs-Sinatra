@@ -30,7 +30,7 @@ configure :production do
 end
 
 DataMapper.finalize
-# DataMapper.auto_migrate!
+DataMapper.auto_migrate!
 
 get '/songs' do
   @songs = Song.all
