@@ -1,7 +1,7 @@
-<h1><%= ::Temple::Utils.escape_html((@student.title)) %>
-</h1><p>Release Date: <%= ::Temple::Utils.escape_html((@student.released_on.strftime("%e %B %Y") if @student.released_on)) %></p>
-<p>Length: <%= ::Temple::Utils.escape_html((@student.length/60)) %> minutes <%= ::Temple::Utils.escape_html((@student.length%60)) %> seconds</p>
-<pre><%= ::Temple::Utils.escape_html((@student.lyrics)) %>
+<h1><%= ::Temple::Utils.escape_html((@student.name)) %>
+</h1><p>Birth Date: <%= ::Temple::Utils.escape_html((@student.released_on.strftime("%e %B %Y") if @student.released_on)) %></p>
+<p>Age: <%= @student.length%> years</p>
+<pre>Bio: <%= ::Temple::Utils.escape_html((@student.lyrics)) %>
 </pre><p><a href="/students">back to students index</a></p>
 <p><a href="/students/<%= ::Temple::Utils.escape_html((@student.id)) %>/edit">edit this student</a></p>
 <form action="/students/<%= ::Temple::Utils.escape_html((@student.id)) %>" method="POST">

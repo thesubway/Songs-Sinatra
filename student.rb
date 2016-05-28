@@ -5,7 +5,7 @@ require './main.rb'
 class Student
   include DataMapper::Resource
   property :id, Serial
-  property :title, String
+  property :name, String
   property :lyrics, Text
   property :length, Integer
   property :released_on, Date
