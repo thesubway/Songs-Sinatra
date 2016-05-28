@@ -1,11 +1,11 @@
 <label for="name">Name:</label>
 <input id="name" name="student[name]" type="text" value="<%= ::Temple::Utils.escape_html((@student.name)) %>" />
 
-<label for="length">Age:</label>
-<input id="length" name="student[length]" type="number" value="<%= ::Temple::Utils.escape_html((@student.length)) %>" />
+<label for="age">Age:</label>
+<input id="age" name="student[age]" type="number" value="<%= ::Temple::Utils.escape_html((@student.age)) %>" />
 
-<label for="released_on">Date Of Birth (mm/dd/yyyy):</label>
-<input id="released_on" name="student[released_on]" type="text" value="<%= ::Temple::Utils.escape_html((@student.released_on.strftime("%m/%d/%Y") if @student.released_on)) %>" />
+<label for="birth_date">Date Of Birth (mm/dd/yyyy):</label>
+<input id="birth_date" name="student[birth_date]" type="text" value="<%= ::Temple::Utils.escape_html((@student.birth_date.strftime("%m/%d/%Y") if @student.birth_date)) %>" />
 
 <label for="bio">Bio:</label>
 <textarea id="bio" name="student[bio]"><%= @student.bio %>

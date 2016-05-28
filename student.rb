@@ -7,10 +7,10 @@ class Student
   property :id, Serial
   property :name, String
   property :bio, Text
-  property :length, Integer
-  property :released_on, Date
+  property :age, Integer
+  property :birth_date, Date
 
-  def released_on=date
+  def birth_date=date
     super Date.strptime(date, '%m/%d/%Y')
   end
 end

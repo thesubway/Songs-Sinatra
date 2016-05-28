@@ -1,7 +1,7 @@
 <h1><%= ::Temple::Utils.escape_html((@student.name)) %>
 <!-- Show student's information: -->
-</h1><p>Birth Date: <%= ::Temple::Utils.escape_html((@student.released_on.strftime("%e %B %Y") if @student.released_on)) %></p>
-<p>Age: <%= @student.length%> years</p>
+</h1><p>Birth Date: <%= ::Temple::Utils.escape_html((@student.birth_date.strftime("%e %B %Y") if @student.birth_date)) %></p>
+<p>Age: <%= @student.age%> years</p>
 <pre>Bio: <%= ::Temple::Utils.escape_html((@student.bio)) %>
 
 <!-- links/buttons: -->
