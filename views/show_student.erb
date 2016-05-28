@@ -1,7 +1,10 @@
 <h1><%= ::Temple::Utils.escape_html((@student.name)) %>
+<!-- Show student's information: -->
 </h1><p>Birth Date: <%= ::Temple::Utils.escape_html((@student.released_on.strftime("%e %B %Y") if @student.released_on)) %></p>
 <p>Age: <%= @student.length%> years</p>
-<pre>Bio: <%= ::Temple::Utils.escape_html((@student.lyrics)) %>
+<pre>Bio: <%= ::Temple::Utils.escape_html((@student.bio)) %>
+
+<!-- links/buttons: -->
 </pre><p><a href="/students">back to students index</a></p>
 <p><a href="/students/<%= ::Temple::Utils.escape_html((@student.id)) %>/edit">edit this student</a></p>
 <form action="/students/<%= ::Temple::Utils.escape_html((@student.id)) %>" method="POST">

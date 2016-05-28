@@ -33,6 +33,7 @@ get '/contact' do
 end
 
 get '/logout' do
+  # ensure user no longer authorized:
   session[:admin] = false
   session.clear redirect to ('/login')
 end
@@ -43,6 +44,7 @@ end
 
 post '/login' do
   if params[:username] == settings.username && params[:password] == settings.password
+    # ensures user is authorized, and goes to students page
     session[:admin] = true
     redirect to ('/students')
   else

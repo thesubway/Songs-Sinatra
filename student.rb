@@ -6,7 +6,7 @@ class Student
   include DataMapper::Resource
   property :id, Serial
   property :name, String
-  property :lyrics, Text
+  property :bio, Text
   property :length, Integer
   property :released_on, Date
 
@@ -33,6 +33,7 @@ DataMapper.finalize
 DataMapper.auto_migrate!
 
 get '/students' do
+  # does not require authorization to view students
   @students = Student.all
   erb :students
 end
