@@ -32,6 +32,24 @@ get '/contact' do
   erb :contact
 end
 
+get '/logout' do
+  session[:admin] = false
+  session.clear redirect to ('/login')
+end
+
+get '/login' do
+  erb :login
+end
+
+post '/login' do
+  if params[:username] == settings.username && params[:password] == settings.password
+    session[:admin] = true
+    redirect to ('/students')
+  else
+    erb :login
+  end
+end
+
 not_found do
   erb :not_found
 end
